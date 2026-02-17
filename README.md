@@ -27,13 +27,13 @@ A star-schema data model was designed to optimize performance and enable advance
 
 🏗 Data Model
 
-Implemented a Star Schema
+1.Implemented a Star Schema
 
-Created Fact tables:
+2.Created Fact tables:
 
-Box Office Performance
+3.Box Office Performance
 
-Ratings
+4.Ratings
 
 Created Dimension tables:
 
