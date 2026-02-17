@@ -1,112 +1,203 @@
-# powerbi-project
-📊 Pixar Business Intelligence Dashboard
+🎬 Strategic Film Performance Analytics
 
-Power BI | DAX | Data Modeling
+Operational BI System | Power BI | DAX | Star Schema
 
-🚀 Project Overview
+🧠 Problem Context
 
-This project is a multi-page Power BI dashboard analyzing Pixar’s 30-year financial and performance trends. The dashboard provides executive-level insights into revenue growth, ROI, profitability, ratings, and awards performance using advanced data modeling and DAX measures.
+Studios rarely struggle due to a single unsuccessful film. Performance risk accumulates when budget allocation, audience reception, ROI, and awards impact interact over time.
 
-The goal was to simulate a real-world business intelligence solution for leadership decision-making.
+Traditional film dashboards report revenue and ratings in isolation. They fail to explain:
 
-📁 Dataset Overview
+Why certain high-grossing films underperform in profitability
 
-The project uses structured datasets including:
+How ratings correlate with financial returns
 
-🎬 Pixar Films
+Where long-term franchise efficiency declines
 
-💰 Box Office Revenue
+Whether awards recognition aligns with financial success
 
-⭐ Ratings (public & critic)
+This project treats each film as an operational investment event and analyzes performance behavior across decades.
 
-🏆 Awards Data
+The objective is to move beyond volume metrics and surface structural performance drivers.
 
-🎭 Genre Information
+🎯 Objectives
 
-A star-schema data model was designed to optimize performance and enable advanced analytics.
+This system converts historical film performance data into strategic insights.
 
-🏗 Data Model
+Key goals:
 
-1.Implemented a Star Schema
+Model film data using a star-schema optimized for analysis
 
-2.Created Fact tables:
+Calculate ROI and profitability rather than reporting revenue alone
 
-3.Box Office Performance
+Track long-term financial efficiency trends
 
-4.Ratings
+Compare critic vs public reception impact
 
-Created Dimension tables:
+Enable executive-level slicing without duplicating data
 
-Films
+Support investment-style decision evaluation
 
-Genres
+The focus is on understanding performance mechanics, not just outcomes.
 
-Awards
+📐 Architecture
+Layered BI Architecture
 
-Established relationships for optimized filtering and reporting
+Data Sources → Data Modeling → DAX Metrics → Interactive Dashboard → Executive Insight
 
-📈 Key KPIs & DAX Measures
+This architecture separates responsibilities:
 
-Developed advanced DAX calculations including:
+Raw film data (source tables)
 
-📊 Total Revenue
+Structured analytical model (fact & dimensions)
 
-📈 ROI (Return on Investment)
+Business logic (DAX measures)
 
-📉 Profit Margin %
+Insight delivery (dashboard)
 
-🔄 Rolling ROI Trends
+Each layer is modular and version-controlled.
 
-⭐ Weighted Public Score
+📁 Repository Structure
+strategic-film-performance-analytics/
+│
+├── powerbi-project/
+│   ├── PixarDashboard.pbip
+│   ├── PixarDashboard.Report/
+│   └── PixarDashboard.SemanticModel/
+│
+├── dax-measures/
+│   └── key_dax_calculations.md
+│
+├── screenshots/
+│   └── executive_overview.png
+│
+├── data-dictionary/
+│   └── schema_description.md
+│
+├── Architecture.png
+├── .gitignore
+└── README.md
 
-🏆 Awards Count per Film
 
-🎬 Top 5 Highest-Grossing Films
+Each component is isolated by responsibility, enabling clean version control and extensibility.
 
-🖥 Dashboard Features
-
-Multi-page navigation
-
-Dynamic slicers
-
-Drill-through reports
-
-Interactive tooltips
-
-Executive summary view
-
-Trend analysis visuals
-
-Performance comparison by genre
-
-🛠 Tools & Technologies
+🛠 Tech Stack
 
 Power BI Desktop
 
-DAX (Data Analysis Expressions)
+DAX (Advanced Calculations)
 
 Power Query
 
-Data Modeling (Star Schema)
+Star Schema Data Modeling
 
-GitHub for version control (.pbip format)
+Git & GitHub (Project-based version control)
 
-📌 Business Insights Generated
+The system is built for analytical clarity, not visual overload.
 
-Identified highest ROI films across decades
+🔄 Data Model Design
 
-Compared critic vs public rating trends
+The model implements a clean Star Schema.
 
-Analyzed profitability vs awards correlation
+📌 Fact Table
 
-Evaluated long-term revenue growth patterns
+Film Performance
 
+Revenue
 
-💡 Skills Demonstrated
+Budget
 
-✔ Data Modeling
-✔ Advanced DAX
-✔ Business Intelligence Reporting
-✔ Data Storytelling
-✔ Executive Dashboard Design
-✔ Git Version Control
+ROI
+
+Profit Margin
+
+Ratings
+
+Awards Count
+
+📌 Dimension Tables
+
+Film
+
+Genre
+
+Year
+
+Rating Source
+
+The model avoids snowflaking to maintain filter clarity and DAX simplicity.
+
+⚙️ Analytical Logic
+Core Business Calculations
+
+ROI = (Revenue – Budget) / Budget
+
+Profit Margin %
+
+Rolling ROI Trend
+
+Weighted Audience Score
+
+Awards Impact Correlation
+
+Top N Film Ranking
+
+All calculations are centralized within a Measure Table for maintainability.
+
+📊 Executive Dashboard Design
+
+The dashboard is built for decision support, not exploratory clutter.
+
+It answers:
+
+Which films generated high revenue but weak profitability?
+
+Does critical acclaim correlate with ROI?
+
+How has financial efficiency evolved over 30 years?
+
+Which genres sustain strong ROI over time?
+
+Are award-winning films financially superior investments?
+
+The design prioritizes:
+
+Clear KPI cards
+
+Controlled slicers
+
+Navigation buttons
+
+Multi-page executive flow
+
+Minimal but powerful visuals
+
+📈 Insights Delivered
+
+The system reveals:
+
+Revenue alone does not predict ROI
+
+High public ratings do not always correlate with profitability
+
+Certain genres sustain stronger financial consistency
+
+Awards recognition moderately aligns with financial performance
+
+Rolling ROI exposes long-term investment volatility
+
+The analysis reframes performance from “Which film made the most?” to “Which investments were structurally efficient?”
+
+💡 Engineering Discipline
+
+Clean star schema
+
+Centralized business logic
+
+Version-controlled project format (.pbip)
+
+Reproducible analytical structure
+
+No duplicated calculated columns
+
+The system is designed for scalability and clarity.
